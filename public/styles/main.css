@@ -1,0 +1,165 @@
+
+body {
+  font-family:'Space Grotesk', sans-serif;;
+  text-align: center;
+  background-image: url("/images/bg.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  height: 100vh; /* Ensure background covers the entire viewport */
+  color: #f2f2f2; /* White text */
+}
+
+/* Header styles */
+.space-header {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: #f2f2f2; /* White text color */
+  text-align: right;
+  padding: 50px;
+}
+
+.space-header h1 {
+  font-size: 38px;
+  margin: 0;
+  padding: 10px;
+}
+
+.space-header p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Search form styles */
+#searchForm {
+  margin-top: 20px;
+}
+
+#searchDate {
+  border: none;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#searchDate::placeholder {
+  color: #333; /* Placeholder text color */
+}
+
+#searchForm {
+  background-color: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+
+#searchForm button {
+  background-color: #ff851b;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Style for the container holding the two divs */
+.content-container {
+  display: flex; 
+  flex-direction: row;
+  align-items: center; /* Vertically align the divs */
+  margin: 40px 0;
+  font-size: 21px;
+}
+
+.display-image {
+  flex: 3; /* Distribute available space equally between the two divs */
+  margin: 30px;
+  padding: 20px;
+  border-radius: 10%;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.display-image img {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 20px 0;
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 10%; /* Rounded corners */
+  animation: glow 2s ease-in-out infinite; /* Apply animation */
+}
+
+@keyframes glow {
+  0% {
+    border-color: #ff851b; /* Initial border color */
+    box-shadow: 0 0 10px rgba(255, 133, 27, 0.5); /* Initial box-shadow */
+  }
+  50% {
+    border-color: #ff851b; /* Midway border color */
+    box-shadow: 0 0 20px rgba(255, 133, 27, 0.7); /* Midway box-shadow */
+  }
+  100% {
+    border-color: #ff851b; /* Final border color */
+    box-shadow: 0 0 10px rgba(255, 133, 27, 0.5); /* Final box-shadow */
+  }
+}
+
+
+.image-details {
+  flex: 3;
+  max-height: 500px; 
+  padding: 30px; 
+  margin: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  box-sizing: border-box; 
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #ff851b; /* Amber color for the title */
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+#searchDate:hover,
+#searchDate:focus,
+#searchForm button:hover,
+#searchForm button:focus {
+  background-color: #ff5722;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Responsive layout adjustments for small screens */
+@media (max-width: 768px) {
+  .space-header {
+    text-align: center;
+  }
+
+  .space-header h1 {
+    font-size: 28px;
+  }
+
+  .space-header p {
+    font-size: 15px;
+  }
+
+  #searchDate {
+    margin-bottom: 10px;
+  }
+
+  .content-container {
+    flex-direction: column; /* Stack divs vertically on small screens */
+  }
+}
+
